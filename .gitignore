@@ -1,0 +1,67 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Editors & IDEs
+.vscode/
+.idea/
+.fleet/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# Environment Variables, Secrets & Keys
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.secret
+secrets.*
+*credentials*
+
+# AI Agents, Local Planning & Scratch Files
+.gemini/
+.claude/
+.agent/
+.cursor/
+design-system/
+scratch/
+tmp/
+
+# Dependencies, Caches & Logs
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.log
+npm-debug.log*
+
+# Archives & Backups
+*.zip
+*.tar.gz
+*.rar
+*.bak
+*.orig
+
+# Unused Design Drafts & Reference Assets (keep clean on GitHub)
+assets/reference.jpg
+assets/reference-editorial.jpg
+assets/circle-raw.png
+assets/circle.png
+assets/girl-raw.jpg
+assets/girl-mask.png
+assets/girl.png
+assets/logo-raw.png
+assets/logo-badge.png
+assets/logo-badge-from-ref.png

@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>ХАРЫБИНА ОЛЬГА — Студия перманентного макияжа</title>
+
+  <meta name="description" content="Студия перманентного макияжа Харыбиной Ольги в Балашихе. Перманентный макияж бровей, губ и век, ламинирование ресниц и бровей, удаление татуажа.">
+  <meta name="theme-color" content="#090807">
+  <link rel="icon" type="image/png" href="assets/logo-xo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:url" content="https://movsisiannartem-hash.github.io/xo-pmu/">
+  <meta property="og:title" content="ХАРЫБИНА ОЛЬГА — Студия перманентного макияжа">
+  <meta property="og:description" content="Перманентный макияж бровей, губ и век, уход и деликатное удаление в Балашихе. Рейтинг 4.9 на Яндекс Картах.">
+  <meta property="og:image" content="https://movsisiannartem-hash.github.io/xo-pmu/assets/girl.jpg">
+
+  <!-- Google Fonts: Cormorant Garamond & Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Global Ambient Copper Light Following Cursor Across Full Page -->
+  <div class="ambient-cursor-torch" id="cursorTorch" aria-hidden="true"></div>
+
+  <!-- =================================================================
+       SITE HEADER (Framed Top Navigation -> Compact Fixed Glass on Scroll)
+       ================================================================= -->
+  <header class="site-header" id="header">
+    <div class="header-inner">
+      <!-- Brand Logo & Studio Name -->
+      <a href="#hero" class="brand-group" aria-label="ХАРЫБИНА ОЛЬГА — Наверх">
+        <div class="brand-logo-wrap">
+          <img src="assets/logo-xo.png" alt="XO — Харыбина Ольга" class="brand-logo-img">
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">ХАРЫБИНА ОЛЬГА</span>
+          <span class="brand-tagline">PERMANENT MAKEUP STUDIO</span>
+        </div>
+      </a>
+
+      <!-- Center Frosted Capsule Navigation (Matches Editorial Reference) -->
+      <nav class="nav-capsule" aria-label="Главное меню">
+        <ul class="nav-list">
+          <li><a href="#services" class="nav-link is-active" data-section="services">Услуги</a></li>
+          <li><a href="#portfolio" class="nav-link" data-section="portfolio">Портфолио</a></li>
+          <li><a href="#about" class="nav-link" data-section="about">О мастере</a></li>
+          <li><a href="#reviews" class="nav-link" data-section="reviews">Отзывы</a></li>
+          <li><a href="#contacts" class="nav-link" data-section="contacts">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Light Pill Button + Mobile Burger -->
+      <div class="header-actions">
+        <a href="https://t.me/OlgaHarybina" target="_blank" rel="noopener noreferrer" class="btn-header-pill" id="btnHeaderBook" aria-label="Записаться на процедуру в Telegram">
+          <span>Записаться</span>
+          <svg class="icon-arrow" width="15" height="12" viewBox="0 0 15 12" fill="none" aria-hidden="true">
+            <path d="M9.5 1.5L14 6M14 6L9.5 10.5M14 6H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+
+        <button type="button" class="btn-burger" id="btnBurger" aria-label="Открыть меню навигации" aria-expanded="false">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true" role="dialog" aria-label="Мобильное меню">
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <div class="drawer-panel">
+      <div class="drawer-top">
+        <div class="brand-text">
+          <span class="brand-name">ХАРЫБИНА ОЛЬГА</span>
+          <span class="brand-tagline">PERMANENT MAKEUP STUDIO</span>
+        </div>
+        <button type="button" class="btn-drawer-close" id="btnDrawerClose" aria-label="Закрыть меню">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <nav aria-label="Мобильная навигация">
+        <ul class="drawer-nav">
+          <li><a href="#services" class="drawer-link">Услуги</a></li>
+          <li><a href="#portfolio" class="drawer-link">Портфолио</a></li>
+          <li><a href="#about" class="drawer-link">О мастере</a></li>
+          <li><a href="#reviews" class="drawer-link">Отзывы</a></li>
+          <li><a href="#contacts" class="drawer-link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <a href="https://t.me/OlgaHarybina" target="_blank" rel="noopener noreferrer" class="btn-primary drawer-cta" id="btnDrawerBook">
+        <span>Записаться на процедуру</span>
+        <svg class="icon-arrow" width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true">
+          <path d="M10 1.5L14.5 6M14.5 6L10 10.5M14.5 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- =================================================================
+         HERO SECTION (Full Bleed 100vh Dark Luxury Editorial Showcase)
+         ================================================================= -->
+    <section class="hero-screen" id="hero">
+      <!-- Background Photography Stage (User's exact portrait photo, pure natural lighting) -->
+      <div class="hero-media" aria-hidden="true">
+        <!-- Tactile subtle matte film texture on obsidian canvas -->
+        <div class="hero-grain"></div>
+        <!-- Hero-local torch in same blending context as lighten portrait -->
+        <div class="ambient-cursor-torch hero-torch" id="heroTorch"></div>
+        <img
+          src="assets/girl.jpg"
+          alt="Студия перманентного макияжа Харыбиной Ольги"
+          class="hero-photo-img"
+          loading="eager"
+          decoding="sync"
+        >
+      </div>
+
+      <!-- Left Editorial Copy & Actions -->
+      <div class="hero-content">
+        <div class="hero-kicker">
+          <span class="kicker-dash" aria-hidden="true"></span>
+          <span class="kicker-label">ПЕРМАНЕНТНЫЙ МАКИЯЖ</span>
+          <span class="kicker-dash" aria-hidden="true"></span>
+        </div>
+
+        <h1 class="hero-heading">
+          <span class="heading-line-wrap"><span class="heading-line line-light">Эстетика вашей</span></span>
+          <span class="heading-line-wrap"><span class="heading-line line-orange">природной красоты</span></span>
+        </h1>
+
+        <div class="hero-actions">
+          <a href="https://t.me/OlgaHarybina" target="_blank" rel="noopener noreferrer" class="btn-primary" id="btnHeroBook">
+            <span class="btn-shimmer" aria-hidden="true"></span>
+            <span>Записаться на процедуру</span>
+            <svg class="icon-arrow" width="17" height="12" viewBox="0 0 17 12" fill="none" aria-hidden="true">
+              <path d="M11 1.5L15.5 6M15.5 6L11 10.5M15.5 6H1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+
+          <a href="#portfolio" class="btn-secondary-editorial">
+            <span>Смотреть работы</span>
+            <span class="circle-arrow-badge" aria-hidden="true">
+              <svg width="13" height="10" viewBox="0 0 13 10" fill="none">
+                <path d="M8 1L12 5M12 5L8 9M12 5H1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Bottom-Right Architectural Detail Note -->
+      <aside class="hero-side-note" aria-label="Индивидуальная эстетика">
+        <span class="side-note-marker" aria-hidden="true"></span>
+        <h2 class="side-note-title">Индивидуальная эстетика</h2>
+        <p class="side-note-text">
+          Каждая процедура подбирается с&nbsp;учётом ваших черт лица, оттенка кожи и&nbsp;желаемого результата.
+        </p>
+      </aside>
+
+      <!-- Scroll Down Indicator (Mouse Pill with Sliding Wheel & Down Chevron from Previous Design) -->
+      <a href="#services" class="scroll-indicator" id="heroScrollCue" aria-label="Прокрутить вниз к услугам">
+        <div class="mouse-pill" aria-hidden="true">
+          <span class="mouse-wheel"></span>
+        </div>
+        <svg class="scroll-chevron" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M1 1L6 5.5L11 1" stroke="rgba(245, 240, 234, 0.65)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </section>
+
+    <!-- =================================================================
+         SECTION 1 — УСЛУГИ («Искусство естественной красоты»)
+         ================================================================= -->
+    <section class="section section-services" id="services">
+      <div class="container">
+        <header class="section-header reveal-item">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            <span>УСЛУГИ И СТОИМОСТЬ</span>
+          </div>
+          <h2 class="section-title">Искусство <span class="text-accent">естественной красоты</span></h2>
+          <p class="section-lead">
+            Деликатная работа с&nbsp;пигментом и&nbsp;эстетический уход для гармоничного образа без шаблонов. Нажмите на стрелку, чтобы раскрыть описание процедуры.
+          </p>
+        </header>
+
+        <div class="services-table reveal-item" id="servicesTable">
+          <div class="service-cat-header">Перманентный макияж</div>
+          <div class="service-row" data-preview-img="assets/service-brows.jpg">
+            <button type="button" class="service-row-trigger" aria-expanded="false" aria-controls="svc-desc-1">
+              <div class="service-row-main">
+                <span class="service-row-num">01</span>
+                <span class="service-row-name">Перманентный макияж бровей</span>
+              </div>
+              <div class="service-row-right">
+                <span class="service-row-price">7&nbsp;000 ₽</span>
+                <span class="service-row-chevron" aria-hidden="true">
+                  <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                    <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+            </button>
+            <div class="service-row-panel" id="svc-desc-1">
+              <div class="service-row-panel-inner">
+                <p class="service-row-desc">Перманентный макияж бровей — идеальные брови без ежедневного макияжа. Доступны техники: пудровое напыление, теневая растушёвка, эффект хны, волосковая, смешанные. Эффект держится 1–3 года, коррекция через 4–6 недель. Запишитесь на консультацию!</p>
+                <a href="https://t.me/OlgaHarybina" target="_blank" rel="noopener noreferrer" class="btn-row-book">
+                  <span>Записаться</span>
+                  <svg class="icon-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+                    <path d="M8.5 1L13 5M13 5L8.5 9M13 5H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="service-row" data-preview-img="assets/service-eyes.jpg">
+            <button type="button" class="service-row-trigger" aria-expanded="false" aria-controls="svc-desc-2">
+              <div class="service-row-main">
+                <span class="service-row-num">02</span>
+                <span class="service-row-name">Перманентный макияж век</span>
+              </div>
+              <div class="service-row-right">
+                <span class="service-row-price">4&nbsp;000 ₽</span>
+                <span class="service-row-chevron" aria-hidden="true">
+                  <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                    <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+            </button>
+            <div class="service-row-panel" id="svc-desc-2">
+              <div class="service-row-panel-inner">
+                <p class="service-row-desc">Перманентный макияж век в студии Х О: стрелки или межресничное пространство, гипоаллергенные пигменты, растушёвка для мягкого эффекта. Длительность — 1–2 часа, восстановление до 10 дней. Подходит для коррекции асимметрии. Бесплатная консультация!</p>
+                <a href="https://t.me/OlgaHarybina" target="_blank" rel="noopener noreferrer" class="btn-row-book">
+                  <span>Записаться</span>
+                  <svg class="icon-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+                    <path d="M8.5 1L13 5M13 5L8.5 9M13 5H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="service-row" data-preview-img="assets/service-lips.jpg">
+            <button type="button" class="service-row-trigger" aria-expanded="false" aria-controls="svc-desc-3">
+              <div class="service-row-main">
+                <span class="service-row-num">03</span>
+                <span class="service-row-name">Перманентный макияж губ</span>
+              </div>
+              <div class="service-row-right">
+                <span class="service-row-price">7&nbsp;500 ₽</span>
+                <span class="service-row-chevron" aria-hidden="true">
+                  <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                    <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+            </button>
+            <div class="service-row-panel" id="svc-desc-3">
+              <div class="service-row-panel-inner">
+                <p class="service-row-desc">Перманентный макияж губ в студии Ольги Харыбиной: подчеркнёт красоту и сохранится 1–2 года. Техники — акварельная, контурная, 3D, полупомадная, помадная. Длительность — 1,5–2 ч, заживление — 7–10 дней. Запишитесь на бесплатную консультацию!</p>
+                <a href="https://t.me/OlgaHarybina" target="_blank" rel="noopener noreferrer" class="btn-row-book">
+                  <span>Записаться</span>
+                  <svg class="icon-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+                    <path d="M8.5 1L13 5M13 5L8.5 9M13 5H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="service-cat-header">Уход за бровями</div>
+          <div class="service-row">
+            <button type="button" class="service-row-trigger" aria-expanded="false" aria-controls="svc-desc-4">
+              <div class="service-row-main">
+                <span class="service-row-num">04</span>
+                <span class="service-row-name">Окрашивание бровей</span>
+              </div>
+              <div class="service-row-right">
+                <span class="service-row-price">500 ₽</span>
+                <span class="service-row-chevron" aria-hidden="true">
+                  <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                    <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+            </button>
+            <div class="service-row-panel" id="svc-desc-4">
+              <div class="service-row-panel-inner">
+                <p class="service-row-desc">Окрашивание бровей в студии Харыбиной Ольги: хна или краска, подбор оттенка под ваш цветотип! Коррекция пинцетом и уход включены. Эффект 2–4 недели, длительность процедуры — 30–40 минут. Запишитесь на сеанс прямо сейчас!</p>
+                <a href="https://t.me/OlgaHarybina" target="_blank" rel="noopener noreferrer" class="btn-row-book">
+                  <span>Записаться</span>
+                  <svg class="icon-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+                    <path d="M8.5 1L13 5M13 5L8.5 9M13 5H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="service-row">
+            <button type="button" class="service-row-trigger" aria-expanded="false" aria-controls="svc-desc-5">
+              <div class="service-row-main">
+                <span class="service-row-num">05</span>
+                <span class="service-row-name">Архитектура бровей</span>
+              </div>
+              <div class="service-row-right">
+                <span class="service-row-price">1&nbsp;500 ₽</span>
+                <span class="service-row-chevron" aria-hidden="true">
+                  <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                    <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+            </button>
+            <div class="service-row-panel" id="svc-desc-5">
+              <div class="service-row-panel-inner">
+                <p class="service-row-desc">Архитектура бровей в студии Харыбиной Ольги: коррекция, окрашивание, укладка! Идеальная форма под черты вашего лица, профессиональные материалы. Эффект до 4 недель. Безопасная процедура. Запишитесь на сеанс прямо сейчас!</p>
+                <a href="https://t.me/OlgaHarybina" target="_blank" rel="noopener noreferrer" class="btn-row-book">
+                  <span>Записаться</span>
+                  <svg class="icon-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+                    <path d="M8.5 1L13 5M13 5L8.5 9M13 5H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="service-cat-header">Уход за ресницами и бровями</div>
+          <div class="service-row">
+            <button type="button" class="service-row-trigger" aria-expanded="false" aria-controls="svc-desc-6">
+              <div class="service-row-main">
+                <span class="service-row-num">06</span>
+                <span class="service-row-name">Корейское ламинирование ресниц</span>
+              </div>
+              <div class="service-row-right">
+                <span class="service-row-price">2&nbsp;400 ₽</span>
+                <span class="service-row-chevron" aria-hidden="true">
+                  <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                    <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+            </button>
+            <div class="service-row-panel" id="svc-desc-6">
+              <div class="service-row-panel-inner">
+                <p class="service-row-desc">Корейское ламинирование ресниц в студии Харыбиной Ольги: изгиб, объём и блеск на 4–6 недель! Состав с кератином и витаминами, безопасно, без ежедневного макияжа. Подходит для прямых и коротких ресниц. Длительность — 1 час. Запишитесь прямо сейчас!</p>
+                <a href="https://t.me/OlgaHarybina" target="_blank" rel="noopener noreferrer" class="btn-row-book">
+                  <span>Записаться</span>
+                  <svg class="icon-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+                    <path d="M8.5 1L13 5M13 5L8.5 9M13 5H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="service-row">
+            <button type="button" class="service-row-trigger" aria-expanded="false" aria-controls="svc-desc-7">
+              <div class="service-row-main">
+                <span class="service-row-num">07</span>
+                <span class="service-row-name">Классическое ламинирование ресниц и бровей</span>
+              </div>
+              <div class="service-row-right">
+                <span class="service-row-price">2&nbsp;000 ₽</span>
+                <span class="service-row-chevron" aria-hidden="true">
+                  <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                    <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+            </button>
+            <div class="service-row-panel" id="svc-desc-7">
+              <div class="service-row-panel-inner">
+                <p class="service-row-desc">Ламинирование ресниц и бровей в студии Харыбиной Ольги: фиксация волосков, объём и уход с кератином! Коррекция формы, окрашивание по желанию. Эффект 4–8 недель. Безопасные составы. Запишитесь на сеанс прямо сейчас!</p>
+                <a href="https://t.me/OlgaHarybina" target="_blank" rel="noopener noreferrer" class="btn-row-book">
+                  <span>Записаться</span>
+                  <svg class="icon-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+                    <path d="M8.5 1L13 5M13 5L8.5 9M13 5H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="service-cat-header">Пилинги и чистки</div>
+          <div class="service-row">
+            <button type="button" class="service-row-trigger" aria-expanded="false" aria-controls="svc-desc-8">
+              <div class="service-row-main">
+                <span class="service-row-num">08</span>
+                <span class="service-row-name">Карбоновый пилинг</span>
+              </div>
+              <div class="service-row-right">
+                <span class="service-row-price">2&nbsp;000 ₽</span>
+                <span class="service-row-chevron" aria-hidden="true">
+                  <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                    <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+            </button>
+            <div class="service-row-panel" id="svc-desc-8">
+              <div class="service-row-panel-inner">
+                <p class="service-row-desc">Карбоновый пилинг в студии Харыбиной Ольги: глубокое очищение и омоложение кожи! Сужение пор, выравнивание тона, уменьшение воспалений. Курс 4–6 сеансов. Подходит для жирной и комбинированной кожи. Запишитесь на консультацию прямо сейчас!</p>
+                <a href="https://t.me/OlgaHarybina" target="_blank" rel="noopener noreferrer" class="btn-row-book">
+                  <span>Записаться</span>
+                  <svg class="icon-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+                    <path d="M8.5 1L13 5M13 5L8.5 9M13 5H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="service-cat-header">Коррекция и удаление</div>
+          <div class="service-row">
+            <button type="button" class="service-row-trigger" aria-expanded="false" aria-controls="svc-desc-9">
+              <div class="service-row-main">
+                <span class="service-row-num">09</span>
+                <span class="service-row-name">Осветление татуажа мощным пикосекундным лазером</span>
+              </div>
+              <div class="service-row-right">
+                <span class="service-row-price">2&nbsp;000 ₽</span>
+                <span class="service-row-chevron" aria-hidden="true">
+                  <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                    <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+            </button>
+            <div class="service-row-panel" id="svc-desc-9">
+              <div class="service-row-panel-inner">
+                <p class="service-row-desc">Осветление татуажа в студии Ольги Харыбиной — деликатная коррекция старого или неудачного ПМ. Используем мощный пикосекундный лазер:мягко снижаем насыщенность цвета, исправляем оттенок, сохраняем форму или полностью осветляем до чистой кожи</p>
+                <a href="https://t.me/OlgaHarybina" target="_blank" rel="noopener noreferrer" class="btn-row-book">
+                  <span>Записаться</span>
+                  <svg class="icon-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+                    <path d="M8.5 1L13 5M13 5L8.5 9M13 5H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="service-row">
+            <button type="button" class="service-row-trigger" aria-expanded="false" aria-controls="svc-desc-10">
+              <div class="service-row-main">
+                <span class="service-row-num">10</span>
+                <span class="service-row-name">Комбинированное удаление татуажа и тату</span>
+              </div>
+              <div class="service-row-right">
+                <span class="service-row-price">3&nbsp;800 ₽</span>
+                <span class="service-row-chevron" aria-hidden="true">
+                  <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                    <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+            </button>
+            <div class="service-row-panel" id="svc-desc-10">
+              <div class="service-row-panel-inner">
+                <p class="service-row-desc">Комбинированное удаление татуажа в студии Ольги Харыбиной: пикосекундный лазер + ремувер. Ускоряет результат — иногда хватает 1–2 процедур вместо 6–8. Подходит для старых, плотных и сложных работ. Консультация обязательна.</p>
+                <a href="https://t.me/OlgaHarybina" target="_blank" rel="noopener noreferrer" class="btn-row-book">
+                  <span>Записаться</span>
+                  <svg class="icon-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+                    <path d="M8.5 1L13 5M13 5L8.5 9M13 5H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="service-cat-header">Специализированные процедуры</div>
+          <div class="service-row">
+            <button type="button" class="service-row-trigger" aria-expanded="false" aria-controls="svc-desc-11">
+              <div class="service-row-main">
+                <span class="service-row-num">11</span>
+                <span class="service-row-name">Трихопигментация</span>
+              </div>
+              <div class="service-row-right">
+                <span class="service-row-price">5&nbsp;000 ₽</span>
+                <span class="service-row-chevron" aria-hidden="true">
+                  <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                    <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+            </button>
+            <div class="service-row-panel" id="svc-desc-11">
+              <div class="service-row-panel-inner">
+                <p class="service-row-desc">Трихопигментация в студии Ольги Харыбиной — процедура для эффекта густоты волос без операции. Подходит женщинам и мужчинам: маскирует залысины, шрамы, корректирует линию роста волос. Пигмент подбирают под цвет волос, результат держится 2–4 года.</p>
+                <a href="https://t.me/OlgaHarybina" target="_blank" rel="noopener noreferrer" class="btn-row-book">
+                  <span>Записаться</span>
+                  <svg class="icon-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+                    <path d="M8.5 1L13 5M13 5L8.5 9M13 5H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="service-row">
+            <button type="button" class="service-row-trigger" aria-expanded="false" aria-controls="svc-desc-12">
+              <div class="service-row-main">
+                <span class="service-row-num">12</span>
+                <span class="service-row-name">Осветление шрамов и рубцов, растяжек</span>
+              </div>
+              <div class="service-row-right">
+                <span class="service-row-price">3&nbsp;000 ₽</span>
+                <span class="service-row-chevron" aria-hidden="true">
+                  <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                    <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+            </button>
+            <div class="service-row-panel" id="svc-desc-12">
+              <div class="service-row-panel-inner">
+                <p class="service-row-desc">Осветление рубцов в студии Ольги Харыбиной — деликатная маскировка шрамов и несовершенств. Процедура выравнивает тон кожи и делает рубец незаметным. Эффект держится до 2–3 лет. Камуфляж проводится после осветления. Запишитесь на консультацию!</p>
+                <a href="https://t.me/OlgaHarybina" target="_blank" rel="noopener noreferrer" class="btn-row-book">
+                  <span>Записаться</span>
+                  <svg class="icon-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+                    <path d="M8.5 1L13 5M13 5L8.5 9M13 5H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="service-row">
+            <button type="button" class="service-row-trigger" aria-expanded="false" aria-controls="svc-desc-13">
+              <div class="service-row-main">
+                <span class="service-row-num">13</span>
+                <span class="service-row-name">Элитный парфюма</span>
+              </div>
+              <div class="service-row-right">
+                <span class="service-row-price">1 ₽</span>
+                <span class="service-row-chevron" aria-hidden="true">
+                  <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                    <path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+            </button>
+            <div class="service-row-panel" id="svc-desc-13">
+              <div class="service-row-panel-inner">
+                <p class="service-row-desc">Элитная парфюмерия в студии Ольги Харыбиной: подберём аромат, который идеально раскроется на вашей коже. Селективные и нишевые композиции, тестирование на коже, консультация по подбору. Найдите свой неповторимый запах — запишитесь на консультацию!</p>
+                <a href="https://t.me/OlgaHarybina" target="_blank" rel="noopener noreferrer" class="btn-row-book">
+                  <span>Записаться</span>
+                  <svg class="icon-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+                    <path d="M8.5 1L13 5M13 5L8.5 9M13 5H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="services-footnote reveal-item">
+          Точную стоимость коррекции, обновления (рефреша) и&nbsp;индивидуальных комплексов можно уточнить при записи по&nbsp;телефону <a href="tel:+79017450342" class="text-accent">+7 (901) 745-03-42</a> или на&nbsp;бесплатной консультации.
+        </p>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         SECTION 2 — ПОРТФОЛИО («Красота в деталях»)
+         ================================================================= -->
+    <section class="section section-portfolio" id="portfolio">
+      <div class="container">
+        <div class="portfolio-top reveal-item">
+          <header class="section-header section-header-compact">
+            <div class="section-eyebrow">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>ПОРТФОЛИО</span>
+            </div>
+            <h2 class="section-title">Красота <span class="text-accent">в деталях</span></h2>
+          </header>
+
+          <!-- Clean Category Switcher Tabs Directly Controlling Before/After Viewer -->
+          <div class="portfolio-filters" role="tablist" aria-label="Категории портфолио">
+            <button type="button" class="filter-tab is-active" data-filter="brows" role="tab" aria-selected="true">Брови</button>
+            <button type="button" class="filter-tab" data-filter="lips" role="tab" aria-selected="false">Губы</button>
+            <button type="button" class="filter-tab" data-filter="eyes" role="tab" aria-selected="false">Веки</button>
+          </div>
+        </div>
+
+        <!-- Featured Interactive Before/After Showcase -->
+        <div class="ba-showcase-wrap reveal-item">
+          <div class="ba-viewer" id="baViewer" role="slider" aria-label="Интерактивное сравнение До и После" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
+            <div class="ba-layer ba-layer-before">
+              <img src="assets/ba-brows-before.jpg" alt="Состояние до процедуры" id="baImgBefore" class="ba-img">
+              <span class="ba-badge ba-badge-before">ДО ПРОЦЕДУРЫ</span>
+            </div>
+            <div class="ba-layer ba-layer-after" id="baAfterLayer">
+              <img src="assets/ba-brows-after.jpg" alt="Заживший эстетический результат" id="baImgAfter" class="ba-img">
+              <span class="ba-badge ba-badge-after">ПОСЛЕ ЗАЖИВЛЕНИЯ</span>
+            </div>
+            <div class="ba-divider" id="baDivider">
+              <div class="ba-handle" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                  <path d="M6 10H14M6 10L9 7M6 10L9 13M14 10L11 7M14 10L11 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="ba-showcase-caption">
+            <div class="ba-caption-left">
+              <span class="ba-caption-kicker">ДО И ПОСЛЕ ЗАЖИВЛЕНИЯ</span>
+              <h3 class="ba-caption-title" id="baCaptionTitle">Перманентный макияж бровей</h3>
+              <p class="ba-caption-text" id="baCaptionDesc">
+                Передвигайте разделитель, чтобы сравнить исходный тон и мягкий пудровый результат.
+              </p>
+            </div>
+            <div class="ba-caption-right">
+              <div class="healing-timeline" aria-label="Этапы заживления">
+                <div class="healing-step">
+                  <span class="healing-dot" aria-hidden="true"></span>
+                  <span class="healing-step-label">День 1 &bull; Чёткий эскиз</span>
+                </div>
+                <div class="healing-step">
+                  <span class="healing-dot" aria-hidden="true"></span>
+                  <span class="healing-step-label">7–10 дней &bull; Заживление</span>
+                </div>
+                <div class="healing-step is-final">
+                  <span class="healing-dot" aria-hidden="true"></span>
+                  <span class="healing-step-label">30 дней &bull; Натуральный тон (&minus;35%)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         SECTION 3 — О МАСТЕРЕ («Ваш мастер — Ольга Харыбина»)
+         ================================================================= -->
+    <section class="section section-about" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-visual reveal-item">
+            <div class="about-frame about-frame-photo">
+              <img
+                src="assets/olga-kharybina.jpg"
+                alt="Ольга Харыбина — мастер перманентного макияжа"
+                class="about-photo"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+          </div>
+
+          <!-- Editorial Philosophy & Verified Studio Details -->
+          <div class="about-content reveal-item">
+            <div class="section-eyebrow">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>О МАСТЕРЕ</span>
+            </div>
+            <h2 class="section-title">Ваш мастер — <span class="text-accent">Ольга Харыбина</span></h2>
+            <div class="about-copy">
+              <p>
+                В&nbsp;основе работы студии лежит философия деликатной эстетики: перманентный макияж подчёркивает вашу природную индивидуальность, сохраняет живую мимику и&nbsp;гармонично смотрится в&nbsp;любом освещении.
+              </p>
+              <p>
+                Перед каждой процедурой подбирается индивидуальная форма под пропорции лица и&nbsp;подтон кожи, используются гипоаллергенные пигменты и&nbsp;одноразовые стерильные расходники, которые вскрываются при вас.
+              </p>
+            </div>
+
+            <div class="about-actions">
+              <a href="https://t.me/OlgaHarybina" target="_blank" rel="noopener noreferrer" class="btn-primary" id="btnAboutBook">
+                <span>Записаться к Ольге</span>
+                <svg class="icon-arrow" width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true">
+                  <path d="M10 1.5L14.5 6M14.5 6L10 10.5M14.5 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         SECTION 4 — ОТЗЫВЫ («Ощущение красоты — в деталях»)
+         ================================================================= -->
+    <section class="section section-reviews" id="reviews">
+      <div class="container">
+        <div class="reviews-header-row reveal-item">
+          <header class="section-header section-header-compact">
+            <div class="section-eyebrow">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>ВПЕЧАТЛЕНИЯ</span>
+            </div>
+            <h2 class="section-title">Ощущение красоты — <span class="text-accent">в деталях</span></h2>
+          </header>
+
+          <div class="reviews-controls">
+            <a href="https://yandex.ru/maps/org/studiya_permanentnogo_makiyazha_kharybinoy_olgi/159856022157/reviews/?ll=37.978092%2C55.833360&z=17" target="_blank" rel="noopener noreferrer" class="btn-reviews-yandex">
+              <span>★ 4.9 &bull; Яндекс Карты</span>
+              <svg class="icon-arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+                <path d="M8.5 1L13 5M13 5L8.5 9M13 5H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <div class="reviews-arrow-group">
+              <button type="button" class="btn-carousel-arrow" id="reviewPrev" aria-label="Предыдущие отзывы">
+                <svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true">
+                  <path d="M6 1.5L1.5 6M1.5 6L6 10.5M1.5 6H15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <span class="reviews-page-counter" id="reviewsCounter" aria-live="polite">1 / 6</span>
+              <button type="button" class="btn-carousel-arrow" id="reviewNext" aria-label="Следующие отзывы">
+                <svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true">
+                  <path d="M10 1.5L14.5 6M14.5 6L10 10.5M14.5 6H1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews-viewport reveal-item">
+          <div class="reviews-track" id="reviewsTrack">
+            <article class="review-card">
+              <div class="review-meta">
+                <span class="review-stars" aria-label="Оценка 5 из 5"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg></span>
+                <span class="review-tag">Яндекс Карты &bull; 11 августа 2026</span>
+              </div>
+              <p class="review-quote">&laquo;Замечательная работа от топ-мастера! Комфортная процедура в уютной студии, Ольга учла все пожелания. Прошло полтора года — цвет и форма держатся отлично!&raquo;</p>
+              <footer class="review-author">
+                <span class="author-name">БУХГАЛТЕРСКИЙ УЧЕТ И Н.</span>
+                <span class="author-source">Подтверждённый отзыв на Яндекс Картах</span>
+              </footer>
+            </article>
+            <article class="review-card">
+              <div class="review-meta">
+                <span class="review-stars" aria-label="Оценка 5 из 5"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg></span>
+                <span class="review-tag">Яндекс Карты &bull; 18 июля 2026</span>
+              </div>
+              <p class="review-quote">&laquo;С мастером Ольгой мне повезло — профессионал своего дела. Подобрали форму бровей и цвет, кабинет чистый, иглу вскрывают при вас. Однозначно рекомендую!&raquo;</p>
+              <footer class="review-author">
+                <span class="author-name">Татьяна Клянова</span>
+                <span class="author-source">Подтверждённый отзыв на Яндекс Картах</span>
+              </footer>
+            </article>
+            <article class="review-card">
+              <div class="review-meta">
+                <span class="review-stars" aria-label="Оценка 5 из 5"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg></span>
+                <span class="review-tag">Яндекс Карты &bull; 5 августа 2026</span>
+              </div>
+              <p class="review-quote">&laquo;Долго решалась на перманент, но у Ольги все сомнения отпали: аккуратно и безболезненно. Уже два года хожу с натуральными бровями, недавно сделала межресничку!&raquo;</p>
+              <footer class="review-author">
+                <span class="author-name">Юлия М.</span>
+                <span class="author-source">Подтверждённый отзыв на Яндекс Картах</span>
+              </footer>
+            </article>
+            <article class="review-card">
+              <div class="review-meta">
+                <span class="review-stars" aria-label="Оценка 5 из 5"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg></span>
+                <span class="review-tag">Яндекс Карты &bull; 9 июля 2026</span>
+              </div>
+              <p class="review-quote">&laquo;Оля — супермастер! Делала перманентный макияж губ и лазерное удаление пигмента бровей: всё комфортно, чисто и уютно, эффект потрясающий!&raquo;</p>
+              <footer class="review-author">
+                <span class="author-name">Марина Семенюк</span>
+                <span class="author-source">Подтверждённый отзыв на Яндекс Картах</span>
+              </footer>
+            </article>
+            <article class="review-card">
+              <div class="review-meta">
+                <span class="review-stars" aria-label="Оценка 5 из 5"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg></span>
+                <span class="review-tag">Яндекс Карты &bull; 8 июля 2026</span>
+              </div>
+              <p class="review-quote">&laquo;Делала брови и губы, а недавно пришла на обновление и снова влюбилась в своё отражение! Форма и цвет держались отлично, теперь просыпаюсь уже с макияжем.&raquo;</p>
+              <footer class="review-author">
+                <span class="author-name">Ирина С.</span>
+                <span class="author-source">Подтверждённый отзыв на Яндекс Картах</span>
+              </footer>
+            </article>
+            <article class="review-card">
+              <div class="review-meta">
+                <span class="review-stars" aria-label="Оценка 5 из 5"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg></span>
+                <span class="review-tag">Яндекс Карты &bull; 4 августа 2026</span>
+              </div>
+              <p class="review-quote">&laquo;Делала перманент бровей у Ольги Харыбиной — результат превзошёл ожидания. Форма идеально подошла к лицу, оттенок натуральный, заживление прошло гладко.&raquo;</p>
+              <footer class="review-author">
+                <span class="author-name">Юлия К.</span>
+                <span class="author-source">Подтверждённый отзыв на Яндекс Картах</span>
+              </footer>
+            </article>
+            <article class="review-card">
+              <div class="review-meta">
+                <span class="review-stars" aria-label="Оценка 5 из 5"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg></span>
+                <span class="review-tag">Яндекс Карты &bull; 2 августа 2026</span>
+              </div>
+              <p class="review-quote">&laquo;Сделала перманентный макияж бровей и губ у Ольги. Цвета подобрали идеально — нюдовые губы и брови выглядят очень натурально и нежно, как своё, только лучше.&raquo;</p>
+              <footer class="review-author">
+                <span class="author-name">Екатерина</span>
+                <span class="author-source">Подтверждённый отзыв на Яндекс Картах</span>
+              </footer>
+            </article>
+            <article class="review-card">
+              <div class="review-meta">
+                <span class="review-stars" aria-label="Оценка 5 из 5"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg></span>
+                <span class="review-tag">Яндекс Карты &bull; 17 августа 2026</span>
+              </div>
+              <p class="review-quote">&laquo;Ольга — мастер своего дела! Делала бровки и межресничку: всё качественно, аккуратно, стерильно и с учётом всех пожеланий. Рекомендую от всей души!&raquo;</p>
+              <footer class="review-author">
+                <span class="author-name">Светлана Панина</span>
+                <span class="author-source">Подтверждённый отзыв на Яндекс Картах</span>
+              </footer>
+            </article>
+            <article class="review-card">
+              <div class="review-meta">
+                <span class="review-stars" aria-label="Оценка 5 из 5"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg></span>
+                <span class="review-tag">Яндекс Карты &bull; 19 октября 2026</span>
+              </div>
+              <p class="review-quote">&laquo;Ольга выполнила работу идеально: брови получились естественные, именно та форма и цвет, как я хотела. Процедура безболезненная, кабинет уютный — вернусь на губы!&raquo;</p>
+              <footer class="review-author">
+                <span class="author-name">Na metle bystree</span>
+                <span class="author-source">Подтверждённый отзыв на Яндекс Картах</span>
+              </footer>
+            </article>
+            <article class="review-card">
+              <div class="review-meta">
+                <span class="review-stars" aria-label="Оценка 5 из 5"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg></span>
+                <span class="review-tag">Яндекс Карты &bull; 7 июля 2026</span>
+              </div>
+              <p class="review-quote">&laquo;Делала в студии татуаж бровей и осталась в восторге! Здесь сошлось всё: уютная атмосфера, профессионализм мастера и внимательный подход к клиенту.&raquo;</p>
+              <footer class="review-author">
+                <span class="author-name">Ольга Б.</span>
+                <span class="author-source">Подтверждённый отзыв на Яндекс Картах</span>
+              </footer>
+            </article>
+            <article class="review-card">
+              <div class="review-meta">
+                <span class="review-stars" aria-label="Оценка 5 из 5"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg></span>
+                <span class="review-tag">Яндекс Карты &bull; 10 августа 2026</span>
+              </div>
+              <p class="review-quote">&laquo;Удалял у Ольги старую 15-летнюю татуировку. Лазер хороший — пигмент сразу ушёл более чем наполовину, с анестезией всё терпимо. Результатом доволен!&raquo;</p>
+              <footer class="review-author">
+                <span class="author-name">Кирилл С.</span>
+                <span class="author-source">Подтверждённый отзыв на Яндекс Картах</span>
+              </footer>
+            </article>
+            <article class="review-card">
+              <div class="review-meta">
+                <span class="review-stars" aria-label="Оценка 5 из 5"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg></span>
+                <span class="review-tag">Яндекс Карты &bull; 11 августа 2026</span>
+              </div>
+              <p class="review-quote">&laquo;Спасибо мастеру Ольге — исправила мои брови и сделала межресничку, теперь утром просыпаюсь уже красоткой! Ничего не навязывает, всем советую.&raquo;</p>
+              <footer class="review-author">
+                <span class="author-name">Елена Александровна</span>
+                <span class="author-source">Подтверждённый отзыв на Яндекс Картах</span>
+              </footer>
+            </article>
+            <article class="review-card">
+              <div class="review-meta">
+                <span class="review-stars" aria-label="Оценка 5 из 5"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg></span>
+                <span class="review-tag">Яндекс Карты &bull; 17 августа 2026</span>
+              </div>
+              <p class="review-quote">&laquo;Одни только плюсы, мастер отличный во всех отношениях! Делали татуаж губ и осветляли брови — я в восторге от результата!&raquo;</p>
+              <footer class="review-author">
+                <span class="author-name">Наталья Андреева</span>
+                <span class="author-source">Подтверждённый отзыв на Яндекс Картах</span>
+              </footer>
+            </article>
+            <article class="review-card">
+              <div class="review-meta">
+                <span class="review-stars" aria-label="Оценка 5 из 5"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg></span>
+                <span class="review-tag">Яндекс Карты &bull; 24 сентября 2026</span>
+              </div>
+              <p class="review-quote">&laquo;Отличный мастер! Всегда хожу к Ольге на брови, губы и межресничку — очень внимательная и приятная девушка. Всё очень понравилось, рекомендую!&raquo;</p>
+              <footer class="review-author">
+                <span class="author-name">Елена Мазурина</span>
+                <span class="author-source">Подтверждённый отзыв на Яндекс Картах</span>
+              </footer>
+            </article>
+            <article class="review-card">
+              <div class="review-meta">
+                <span class="review-stars" aria-label="Оценка 5 из 5"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg></span>
+                <span class="review-tag">Яндекс Карты &bull; 3 августа 2026</span>
+              </div>
+              <p class="review-quote">&laquo;Была в студии у мастера Ольги — очень понравилось качество выполненной работы. Мастер услышала все пожелания и сделала именно так, как я хотела.&raquo;</p>
+              <footer class="review-author">
+                <span class="author-name">Анастасия</span>
+                <span class="author-source">Подтверждённый отзыв на Яндекс Картах</span>
+              </footer>
+            </article>
+            <article class="review-card">
+              <div class="review-meta">
+                <span class="review-stars" aria-label="Оценка 5 из 5"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg></span>
+                <span class="review-tag">Яндекс Карты &bull; 9 июля 2026</span>
+              </div>
+              <p class="review-quote">&laquo;В этой студии делала осветление бровей от старого татуажа лазером. Всё прошло быстро и безболезненно благодаря профессионализму Ольги.&raquo;</p>
+              <footer class="review-author">
+                <span class="author-name">Лариса Лушенко</span>
+                <span class="author-source">Подтверждённый отзыв на Яндекс Картах</span>
+              </footer>
+            </article>
+            <article class="review-card">
+              <div class="review-meta">
+                <span class="review-stars" aria-label="Оценка 5 из 5"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg></span>
+                <span class="review-tag">Яндекс Карты &bull; 10 августа 2026</span>
+              </div>
+              <p class="review-quote">&laquo;Ольга — замечательный мастер с индивидуальным подходом. Прислушивается к каждой детали и работает бережно. Однозначно рекомендую!&raquo;</p>
+              <footer class="review-author">
+                <span class="author-name">Маргарита П.</span>
+                <span class="author-source">Подтверждённый отзыв на Яндекс Картах</span>
+              </footer>
+            </article>
+            <article class="review-card">
+              <div class="review-meta">
+                <span class="review-stars" aria-label="Оценка 5 из 5"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg><svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1L8.75 4.8L12.9 5.3L9.85 8.15L10.65 12.25L7 10.25L3.35 12.25L4.15 8.15L1.1 5.3L5.25 4.8L7 1Z" fill="#F36B21"/></svg></span>
+                <span class="review-tag">Яндекс Карты &bull; 2 октября 2026</span>
+              </div>
+              <p class="review-quote">&laquo;Очень понравилось обслуживание и работа мастера&raquo;</p>
+              <footer class="review-author">
+                <span class="author-name">Арк Арк</span>
+                <span class="author-source">Подтверждённый отзыв на Яндекс Картах</span>
+              </footer>
+            </article>
+          </div>
+        </div>
+
+        <div class="reviews-dots" id="reviewsDots" role="tablist" aria-label="Страницы отзывов"></div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         SECTION 6 — ЗАПИСЬ И КОНТАКТЫ («Подчеркнём вашу природную красоту»)
+         ================================================================= -->
+    <section class="section section-booking" id="contacts">
+      <div class="container">
+        <div class="booking-hero reveal-item">
+          <div class="section-eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            <span>ЗАПИСЬ В СТУДИЮ</span>
+          </div>
+          <h2 class="section-title booking-title">Подчеркнём вашу <span class="text-accent">природную красоту</span></h2>
+          <p class="booking-lead">
+            Оставьте заявку на индивидуальную консультацию, чтобы согласовать форму, оттенок и&nbsp;удобную дату визита к&nbsp;Ольге Харыбиной.
+          </p>
+          <a href="https://t.me/OlgaHarybina" target="_blank" rel="noopener noreferrer" class="btn-primary btn-primary-lg" id="btnFinalBook">
+            <span>Записаться на консультацию</span>
+            <svg class="icon-arrow" width="17" height="12" viewBox="0 0 17 12" fill="none" aria-hidden="true">
+              <path d="M11 1.5L15.5 6M15.5 6L11 10.5M15.5 6H1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="contacts-showcase reveal-item">
+          <!-- Left: Structured Studio Info Panel -->
+          <div class="contacts-panel">
+            <div class="contacts-panel-top">
+              <span class="contact-label">КОНТАКТЫ СТУДИИ</span>
+              <span class="contact-status">
+                <span class="contact-status-dot" aria-hidden="true"></span>
+                Ежедневно, 10:00–20:00
+              </span>
+            </div>
+
+            <div class="contact-block">
+              <span class="contact-sublabel">ТЕЛЕФОН ДЛЯ ЗАПИСИ</span>
+              <div class="contact-action-row">
+                <a href="tel:+79017450342" class="contact-phone-hero">+7 (901) 745-03-42</a>
+                <button type="button" class="btn-copy-contact" data-copy="+7 (901) 745-03-42" data-copy-label="Номер телефона скопирован" aria-label="Скопировать номер телефона">
+                  <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <rect x="5" y="5" width="9" height="9" rx="2" stroke="currentColor" stroke-width="1.3"/>
+                    <path d="M11 3V2.8C11 1.80589 10.1941 1 9.2 1H2.8C1.80589 1 1 1.80589 1 2.8V9.2C1 10.1941 1.80589 11 2.8 11H3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="contact-block">
+              <span class="contact-sublabel">АДРЕС И ВРЕМЯ РАБОТЫ</span>
+              <div class="contact-action-row">
+                <p class="contact-value">г. Балашиха, ул. 40&nbsp;лет Победы, д.&nbsp;33</p>
+                <button type="button" class="btn-copy-contact" data-copy="г. Балашиха, ул. 40 лет Победы, д. 33" data-copy-label="Адрес студии скопирован" aria-label="Скопировать адрес студии">
+                  <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <rect x="5" y="5" width="9" height="9" rx="2" stroke="currentColor" stroke-width="1.3"/>
+                    <path d="M11 3V2.8C11 1.80589 10.1941 1 9.2 1H2.8C1.80589 1 1 1.80589 1 2.8V9.2C1 10.1941 1.80589 11 2.8 11H3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+                  </svg>
+                </button>
+              </div>
+              <p class="contact-note">Московская область, 1-й этаж &bull; Ежедневно с&nbsp;10:00 до&nbsp;20:00</p>
+            </div>
+
+            <div class="contact-block contact-block-socials">
+              <span class="contact-sublabel">МЕССЕНДЖЕРЫ И СОЦСЕТИ</span>
+              <div class="messenger-links">
+                <a href="https://max.ru/u/f9LHodD0cOIp1lQTT1NA04xXCkHktDgxXMa_0yoantR7SnRgUw24CjoGw44" target="_blank" rel="noopener noreferrer" class="btn-messenger">MAX →</a>
+                <a href="https://t.me/OlgaHarybina" target="_blank" rel="noopener noreferrer" class="btn-messenger">Telegram →</a>
+                <a href="https://vk.ru/olgahapermanentmakeup" target="_blank" rel="noopener noreferrer" class="btn-messenger">ВКонтакте →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Dark Mini-Map of the Salon -->
+          <div class="studio-map-card">
+            <div class="studio-map-frame">
+              <iframe
+                class="studio-map-iframe"
+                src="https://yandex.ru/map-widget/v1/?ll=37.978092%2C55.833360&z=16&pt=37.978092%2C55.833360%2Cpm2orl&theme=dark"
+                title="Интерактивная карта проезда — Студия перманентного макияжа Харыбиной Ольги, г. Балашиха, ул. 40 лет Победы, д. 33"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
+              <div class="studio-map-badge" aria-hidden="true">
+                <span class="map-pin"></span>
+                <span>Студия &bull; 1-й этаж</span>
+              </div>
+            </div>
+
+            <div class="studio-map-bar">
+              <div class="studio-map-meta">
+                <strong class="map-title">Яндекс Карты &bull; 55.833360, 37.978092</strong>
+                <span class="map-note">Балашиха, ул. 40&nbsp;лет Победы, д.&nbsp;33</span>
+              </div>
+              <a href="https://yandex.ru/maps/org/studiya_permanentnogo_makiyazha_kharybinoy_olgi/159856022157/?ll=37.978092%2C55.833360&z=17" target="_blank" rel="noopener noreferrer" class="btn-map-route">
+                <span>Построить маршрут →</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Minimalist Editorial Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-name">ХАРЫБИНА ОЛЬГА</span>
+          <span class="footer-copy">&copy; 2026 Студия перманентного макияжа &bull; г.&nbsp;Балашиха, ул.&nbsp;40&nbsp;лет Победы, д.&nbsp;33</span>
+        </div>
+
+        <nav class="footer-legal-nav" aria-label="Правовая информация">
+          <button type="button" class="footer-legal-link" data-legal-doc="privacy">Политика конфиденциальности</button>
+          <button type="button" class="footer-legal-link" data-legal-doc="consent">Обработка персональных данных</button>
+          <button type="button" class="footer-legal-link" data-legal-doc="cookies">Файлы cookie</button>
+          <button type="button" class="footer-legal-link" data-legal-doc="terms">Условия записи</button>
+          <button type="button" class="footer-legal-link" id="btnOpenCookieSettings">Настройки cookie</button>
+          <a href="#hero" class="footer-top-link">Наверх ↑</a>
+        </nav>
+      </div>
+
+      <p class="footer-disclaimer">
+        Все материалы, описания процедур, фотоработы и&nbsp;ориентировочная стоимость (&laquo;от ...&nbsp;₽&raquo;), размещённые на&nbsp;сайте, носят исключительно информационно-справочный характер и&nbsp;ни&nbsp;при каких условиях не&nbsp;являются публичной офертой (ст.&nbsp;435, 437&nbsp;ГК&nbsp;РФ). Услуги оказываются лицам старше 18&nbsp;лет после очной консультации и&nbsp;исключения индивидуальных противопоказаний; итоговый результат и&nbsp;стойкость пигмента зависят от&nbsp;особенностей кожи и&nbsp;соблюдения рекомендаций по&nbsp;уходу. Обработка данных и&nbsp;настроек cookie осуществляется в&nbsp;соответствии с&nbsp;№&nbsp;152-ФЗ; обращение в&nbsp;мессенджеры и&nbsp;звонок инициируются пользователем добровольно.
+      </p>
+    </div>
+  </footer>
+
+  <!-- =================================================================
+       LEGAL & PRIVACY DOCUMENTS MODAL (152-ФЗ, ПДн, Cookie, Оферта)
+       ================================================================= -->
+  <div class="booking-modal legal-modal" id="legalModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="legalModalTitle">
+    <div class="modal-overlay" id="legalModalOverlay"></div>
+    <div class="modal-card legal-modal-card">
+      <button type="button" class="modal-close" id="legalModalClose" aria-label="Закрыть правовую информацию">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <div class="modal-header legal-modal-header">
+        <span class="modal-kicker">ПРАВОВАЯ ДОКУМЕНТАЦИЯ &bull; 152-ФЗ &bull; 149-ФЗ &bull; ГК РФ</span>
+        <h2 class="modal-title" id="legalModalTitle">Политика конфиденциальности</h2>
+      </div>
+
+      <div class="legal-tabs" role="tablist" aria-label="Разделы документов">
+        <button type="button" class="legal-tab is-active" role="tab" aria-selected="true" data-legal-tab="privacy">Политика ПДн</button>
+        <button type="button" class="legal-tab" role="tab" aria-selected="false" data-legal-tab="consent">Согласие на обработку</button>
+        <button type="button" class="legal-tab" role="tab" aria-selected="false" data-legal-tab="cookies">Файлы cookie</button>
+        <button type="button" class="legal-tab" role="tab" aria-selected="false" data-legal-tab="terms">Условия и оферта</button>
+      </div>
+
+      <div class="legal-body" id="legalModalBody" tabindex="0">
+        <!-- Panel 1: Privacy Policy -->
+        <article class="legal-panel is-active" data-legal-panel="privacy" role="tabpanel">
+          <p class="legal-updated">Редакция 2026&nbsp;года. Действует бессрочно для всех посетителей сайта Студии перманентного макияжа Харыбиной Ольги (Московская область, г.&nbsp;Балашиха, ул.&nbsp;40&nbsp;лет Победы, д.&nbsp;33).</p>
+
+          <h3>1. Общие положения и&nbsp;статус документа</h3>
+          <p>
+            Настоящая Политика конфиденциальности и&nbsp;обработки персональных данных (далее&nbsp;&mdash; Политика) разработана в&nbsp;соответствии с&nbsp;Конституцией&nbsp;РФ, Гражданским кодексом&nbsp;РФ, Федеральным законом от&nbsp;27.07.2006 №&nbsp;152-ФЗ &laquo;О&nbsp;персональных данных&raquo; (далее&nbsp;&mdash; Закон&nbsp;№&nbsp;152-ФЗ), Федеральным законом от&nbsp;27.07.2006 №&nbsp;149-ФЗ &laquo;Об&nbsp;информации, информационных технологиях и&nbsp;о&nbsp;защите информации&raquo; и&nbsp;актами Роскомнадзора.
+          </p>
+          <p>
+            Документ определяет порядок обработки и&nbsp;меры по&nbsp;обеспечению безопасности сведений о&nbsp;пользователях сайта (далее&nbsp;&mdash; Пользователь, Субъект ПДн), принимаемые Студией перманентного макияжа Харыбиной Ольги (далее&nbsp;&mdash; Оператор, Студия). Продолжение использования сайта означает свободное, информированное и&nbsp;осознанное ознакомление с&nbsp;Политикой. При несогласии с&nbsp;её&nbsp;положениями Пользователь обязан прекратить использование ресурса.
+          </p>
+
+          <h3>2. Основные термины (ст.&nbsp;3 Закона&nbsp;№&nbsp;152-ФЗ)</h3>
+          <ul>
+            <li><strong>Персональные данные (ПДн):</strong> любая информация, относящаяся прямо или косвенно к&nbsp;определённому или определяемому физическому лицу (Пользователю).</li>
+            <li><strong>Обработка ПДн:</strong> любое действие или совокупность действий с&nbsp;персональными данными с&nbsp;использованием средств автоматизации или без таковых, включая сбор, запись, систематизацию, накопление, хранение, уточнение, извлечение, использование, обезличивание, блокирование, удаление и&nbsp;уничтожение.</li>
+            <li><strong>Конфиденциальность ПДн:</strong> обязательное требование не&nbsp;допускать распространения сведений без согласия субъекта или иного законного основания.</li>
+          </ul>
+
+          <h3>3. Правовые основания и&nbsp;принципы обработки</h3>
+          <p>
+            Оператор обрабатывает данные на&nbsp;основании добровольного согласия Пользователя, а&nbsp;также в&nbsp;целях предварительного согласования условий оказания услуг по&nbsp;инициативе самого клиента (п.&nbsp;1 и&nbsp;п.&nbsp;5 ч.&nbsp;1 ст.&nbsp;6 Закона&nbsp;№&nbsp;152-ФЗ). Обработка ограничивается достижением конкретных, заранее определённых и&nbsp;законных целей; накопление избыточных сведений не&nbsp;допускается.
+          </p>
+          <p>
+            В&nbsp;соответствии с&nbsp;требованиями ч.&nbsp;5 ст.&nbsp;18 Закона&nbsp;№&nbsp;152-ФЗ запись, систематизация, накопление, хранение, уточнение и&nbsp;извлечение персональных данных граждан Российской Федерации осуществляются исключительно с&nbsp;использованием баз данных, находящихся на&nbsp;территории&nbsp;РФ.
+          </p>
+
+          <h3>4. Состав и&nbsp;ограничения категорий данных</h3>
+          <ul>
+            <li><strong>Контактные сведения:</strong> имя, номер телефона и/или публичный никнейм в&nbsp;мессенджерах Telegram, MAX, ВКонтакте&nbsp;&mdash; исключительно в&nbsp;объёме, добровольно предоставленном Пользователем при звонке или личном сообщении.</li>
+            <li><strong>Параметры обращения:</strong> интересующая процедура, желаемые дата и&nbsp;время визита, сопутствующие вопросы по&nbsp;подготовке и&nbsp;заживлению.</li>
+            <li><strong>Технические сведения:</strong> IP-адрес, параметры браузера и&nbsp;устройства, а&nbsp;также локальные записи настроек интерфейса и&nbsp;файлы cookie (в&nbsp;соответствии с&nbsp;выбором Пользователя в&nbsp;уведомлении cookie).</li>
+          </ul>
+          <p>
+            <strong>Важно:</strong> через сайт не&nbsp;осуществляется сбор специальных категорий персональных данных о&nbsp;состоянии здоровья или биометрических данных (ст.&nbsp;10–11 Закона&nbsp;№&nbsp;152-ФЗ). Уточнение индивидуальных противопоказаний проводится мастером в&nbsp;устной форме на&nbsp;очной консультации в&nbsp;студии непосредственно перед процедурой.
+          </p>
+
+          <h3>5. Цели, сроки хранения и&nbsp;особенности архитектуры сайта</h3>
+          <p>
+            Персональные данные используются строго для консультирования по&nbsp;услугам студии, записи, подтверждения, переноса или отмены визита, урегулирования обращений клиентов и&nbsp;обеспечения стабильной работы сайта.
+          </p>
+          <p>
+            На&nbsp;сайте <strong>отсутствуют</strong> веб-формы прямой отправки анкет, учётные записи пользователей и&nbsp;онлайн-эквайринг: обращение к&nbsp;мастеру инициируется Пользователем самостоятельно путём телефонного вызова или перехода по&nbsp;официальной ссылке в&nbsp;мессенджеры MAX / Telegram. Срок хранения переписки и&nbsp;записи ограничен достижением целей консультации и&nbsp;обслуживания либо прекращается досрочно при поступлении отзыва согласия.
+          </p>
+
+          <h3>6. Передача третьим лицам и&nbsp;внешние сервисы</h3>
+          <p>
+            Оператор <strong>не&nbsp;продаёт</strong> и&nbsp;<strong>не&nbsp;передаёт</strong> персональные данные третьим лицам в&nbsp;рекламных, аналитических или коммерческих целях. Исключения составляют только случаи, прямо установленные законодательством&nbsp;РФ (по&nbsp;мотивированному запросу уполномоченных государственных органов).
+          </p>
+          <p>
+            При переходе Пользователя в&nbsp;сторонние мессенджеры (Telegram, MAX, ВКонтакте) или при загрузке встроенного виджета Яндекс Карт в&nbsp;разделе &laquo;Контакты&raquo; обработка технических параметров соединения регулируется политиками конфиденциальности владельцев указанных платформ.
+          </p>
+
+          <h3>7. Меры защиты и&nbsp;права субъекта персональных данных</h3>
+          <p>
+            Оператор обеспечивает сохранность данных при помощи организационных и&nbsp;технических мер: доступа только у&nbsp;уполномоченного мастера, защищённых устройств с&nbsp;парольной и&nbsp;двухфакторной защитой, а&nbsp;также регулярного удаления устаревших диалогов.
+          </p>
+          <p>
+            На&nbsp;основании ст.&nbsp;14–17 Закона&nbsp;№&nbsp;152-ФЗ Пользователь вправе запросить информацию о&nbsp;своих персональных данных, потребовать их&nbsp;уточнения, блокирования или уничтожения, а&nbsp;также отозвать согласие в&nbsp;любой момент. Обращения рассматриваются и&nbsp;обработка прекращается в&nbsp;сроки, предусмотренные ст.&nbsp;20–21 Закона&nbsp;№&nbsp;152-ФЗ (в&nbsp;срок до&nbsp;10&nbsp;рабочих дней с&nbsp;момента получения требования при наличии законных оснований).
+          </p>
+
+          <h3>8. Сведения об&nbsp;Операторе и&nbsp;контакты для обращений</h3>
+          <p>
+            Оператор: Студия перманентного макияжа Харыбиной Ольги. Адрес приёма обращений и&nbsp;оказания услуг: Московская область, г.&nbsp;Балашиха, ул.&nbsp;40&nbsp;лет Победы, д.&nbsp;33 (1-й этаж), ежедневно с&nbsp;10:00 до&nbsp;20:00. Телефон для связи и&nbsp;направления запросов по&nbsp;персональным данным: <a href="tel:+79017450342" class="text-accent">+7 (901) 745-03-42</a>. Полные регистрационные реквизиты (ИНН/ОГРНИП) предоставляются клиенту по&nbsp;запросу до&nbsp;начала оказания услуг.
+          </p>
+        </article>
+
+        <!-- Panel 2: Personal Data Consent -->
+        <article class="legal-panel" data-legal-panel="consent" role="tabpanel" hidden>
+          <p class="legal-updated">Форма информированного согласия на&nbsp;обработку персональных данных (ст.&nbsp;9 Федерального закона от&nbsp;27.07.2006 №&nbsp;152-ФЗ).</p>
+
+          <h3>1. Предмет и&nbsp;адресат согласия</h3>
+          <p>
+            Я, являясь совершеннолетним дееспособным пользователем сайта, действуя свободно, своей волей и&nbsp;в&nbsp;своём интересе, настоящим даю конкретное, предметное, информированное, сознательное и&nbsp;однозначное согласие на&nbsp;обработку моих персональных данных Студии перманентного макияжа Харыбиной Ольги (адрес: Московская область, г.&nbsp;Балашиха, ул.&nbsp;40&nbsp;лет Победы, д.&nbsp;33, далее&nbsp;&mdash; Оператор).
+          </p>
+
+          <h3>2. Момент предоставления согласия</h3>
+          <p>
+            Согласие выражается путём совершения мной однозначных конклюдентных действий: выбора параметров в&nbsp;баннере cookie, набора телефонного номера <a href="tel:+79017450342" class="text-accent">+7 (901) 745-03-42</a> либо отправки сообщения при переходе по&nbsp;кнопкам записи в&nbsp;официальные каналы Оператора (Telegram, MAX, ВКонтакте).
+          </p>
+
+          <h3>3. Перечень данных и&nbsp;допустимые действия</h3>
+          <ul>
+            <li><strong>Состав ПДн:</strong> имя или псевдоним, контактный номер телефона, идентификатор аккаунта в&nbsp;мессенджере, текст запроса о&nbsp;процедуре, выбранные дата и&nbsp;время визита, а&nbsp;также технические сведения устройства и&nbsp;cookie (в&nbsp;пределах выбранных настроек).</li>
+            <li><strong>Действия с&nbsp;данными:</strong> сбор, запись, систематизация, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, обезличивание, блокирование, удаление и&nbsp;уничтожение с&nbsp;применением средств автоматизации и&nbsp;без них.</li>
+            <li><strong>Цели обработки:</strong> проведение предварительной консультации, согласование, подтверждение, перенос или отмена записи в&nbsp;студию, направление сервисных напоминаний о&nbsp;визите и&nbsp;обеспечение корректной работы сайта.</li>
+          </ul>
+
+          <h3>4. Ограничения на&nbsp;распространение, фото и&nbsp;отзывы</h3>
+          <p>
+            Настоящее согласие <strong>не</strong> является согласием на&nbsp;распространение персональных данных неограниченному кругу лиц (в&nbsp;смысле ст.&nbsp;10.1 Закона&nbsp;№&nbsp;152-ФЗ) и&nbsp;<strong>не</strong> разрешает передачу моих контактов сторонним организациям или проведение рекламных спам-рассылок.
+          </p>
+          <p>
+            Размещение фотографий работ (&laquo;до/после&raquo;) на&nbsp;сайте осуществляется исключительно при получении отдельного добровольного разрешения клиента в&nbsp;студии, а&nbsp;тексты отзывов публикуются на&nbsp;основании открытых пользовательских публикаций из&nbsp;профиля Студии в&nbsp;сервисе Яндекс Карты.
+          </p>
+
+          <h3>5. Срок действия и&nbsp;порядок отзыва согласия</h3>
+          <p>
+            Согласие действует с&nbsp;момента его предоставления до&nbsp;достижения целей обработки либо до&nbsp;момента его отзыва субъектом. Я&nbsp;уведомлён(а), что вправе отозвать согласие в&nbsp;любое время без объяснения причин, обратившись по&nbsp;телефону <a href="tel:+79017450342" class="text-accent">+7 (901) 745-03-42</a>, в&nbsp;мессенджер либо лично по&nbsp;адресу студии. При получении отзыва Оператор прекращает обработку и&nbsp;уничтожает данные в&nbsp;порядке ст.&nbsp;21 Закона&nbsp;№&nbsp;152-ФЗ.
+          </p>
+        </article>
+
+        <!-- Panel 3: Cookie Policy -->
+        <article class="legal-panel" data-legal-panel="cookies" role="tabpanel" hidden>
+          <p class="legal-updated">Политика в&nbsp;отношении использования файлов cookie, локального хранилища браузера и&nbsp;интерактивных виджетов.</p>
+
+          <h3>1. Что такое файлы cookie и&nbsp;локальное хранилище</h3>
+          <p>
+            Файлы cookie и&nbsp;технология локального веб-хранилища браузера (<code>localStorage</code>) представляют собой небольшие технические записи, сохраняемые на&nbsp;вашем устройстве при открытии страниц. Они не&nbsp;исполняют программный код, не&nbsp;содержат вредоносных модулей и&nbsp;используются исключительно для запоминания ваших предпочтений и&nbsp;стабильного отображения интерфейса.
+          </p>
+
+          <h3>2. Какие категории применяются на&nbsp;сайте</h3>
+          <ul>
+            <li><strong>Технические (строго необходимые):</strong> ключ <code>kharybina_cookie_consent</code> в&nbsp;локальном хранилище браузера, фиксирующий ваш выбор (<code>all</code> или <code>essential</code>), чтобы не&nbsp;запрашивать подтверждение при каждом обновлении страницы и&nbsp;сохранять работоспособность интерфейса. Срок хранения&nbsp;&mdash; до&nbsp;самостоятельной очистки данных браузера Пользователем.</li>
+            <li><strong>Функциональные и&nbsp;интеграции третьих лиц:</strong> при прокрутке к&nbsp;разделу &laquo;Контакты&raquo; и&nbsp;загрузке встроенной интерактивной карты сервис Яндекс Карты (ООО&nbsp;&laquo;ЯНДЕКС&raquo;) может устанавливать собственные технические cookie для отображения масштаба, тёмного оформления, расчёта маршрута и&nbsp;защиты от&nbsp;автоматических запросов согласно Политике конфиденциальности Яндекса.</li>
+            <li><strong>Маркетинговые и&nbsp;рекламные трекеры:</strong> на&nbsp;сайте <strong>не&nbsp;используются</strong> сторонние рекламные пиксели перепродажи трафика, сквозная рекламная слежка или скрытая передача профилей пользователей сторонним сетям.</li>
+          </ul>
+
+          <h3>3. Как управлять настройками и&nbsp;отказаться от&nbsp;cookie</h3>
+          <p>
+            При первом входе на&nbsp;сайт вы&nbsp;можете выбрать режим &laquo;Принять&raquo; (разрешение технических и&nbsp;функциональных параметров) либо &laquo;Только необходимые&raquo; (сохранение исключительно факта вашего выбора в&nbsp;интерфейсе). Вы&nbsp;вправе изменить решение в&nbsp;любой момент через кнопку &laquo;Настройки cookie&raquo; в&nbsp;подвале сайта или ниже, а&nbsp;также полностью заблокировать файлы cookie и&nbsp;локальное хранилище в&nbsp;параметрах браузера (Safari, Chrome, Яндекс Браузер, Firefox). При полной блокировке локального хранилища уведомление может появляться повторно при каждом визите.
+          </p>
+
+          <div class="legal-cookie-actions">
+            <button type="button" class="btn-cookie-outline" id="legalCookieEssentialBtn">Оставить только необходимые</button>
+            <button type="button" class="btn-cookie-accept" id="legalCookieAcceptAllBtn">Принять все cookie</button>
+          </div>
+        </article>
+
+        <!-- Panel 4: Terms & Disclaimer -->
+        <article class="legal-panel" data-legal-panel="terms" role="tabpanel" hidden>
+          <p class="legal-updated">Пользовательское соглашение, медицинские ограничения, правовая оговорка по&nbsp;ст.&nbsp;437&nbsp;ГК&nbsp;РФ и&nbsp;правила записи.</p>
+
+          <h3>1. Справочный характер информации (не&nbsp;является офертой)</h3>
+          <p>
+            Все информационные материалы, описания процедур перманентного макияжа, ламинирования и&nbsp;лазерного осветления, ориентировочное время сеанса, фотографии примеров и&nbsp;указанная стоимость (&laquo;от ...&nbsp;₽&raquo;) размещены исключительно в&nbsp;ознакомительных целях.
+          </p>
+          <p>
+            Размещённые сведения ни&nbsp;при каких условиях не&nbsp;являются публичной офертой в&nbsp;смысле ст.&nbsp;435 и&nbsp;ч.&nbsp;2 ст.&nbsp;437 Гражданского кодекса Российской Федерации. Окончательная стоимость, подбор оттенка, техника и&nbsp;объём работы определяются мастером индивидуально на&nbsp;очной консультации до&nbsp;начала оказания услуги (с&nbsp;учётом исходного состояния кожи, необходимости перекрытия старого пигмента или дополнительной коррекции).
+          </p>
+
+          <h3>2. Возрастной ценз 18+ и&nbsp;медицинские противопоказания</h3>
+          <p>
+            Процедуры перманентного макияжа, ламинирования и&nbsp;лазерного осветления проводятся исключительно для совершеннолетних лиц, достигших 18&nbsp;лет. Перед сеансом мастер проводит обязательную консультацию и&nbsp;визуальную оценку кожи для исключения индивидуальных противопоказаний.
+          </p>
+          <ul>
+            <li>К&nbsp;основным противопоказаниям относятся: беременность и&nbsp;период грудного вскармливания, декомпенсированный сахарный диабет, нарушения свёртываемости крови, онкологические и&nbsp;тяжёлые системные заболевания, склонность к&nbsp;келоидным рубцам, острые инфекции, обострение герпеса или дерматитов в&nbsp;зоне работы, недавний приём системных ретиноидов и&nbsp;антикоагулянтов.</li>
+            <li>При наличии противопоказаний либо сомнений в&nbsp;безопасности мастер вправе перенести или отказать в&nbsp;проведении процедуры в&nbsp;интересах здоровья клиента.</li>
+          </ul>
+
+          <h3>3. Индивидуальность результата и&nbsp;ответственность за&nbsp;уход</h3>
+          <p>
+            Итоговый оттенок зажившего пигмента, равномерность приживления и&nbsp;срок носки зависят от&nbsp;индивидуального обмена веществ, типа и&nbsp;плотности кожи, иммунного ответа организма, воздействия ультрафиолета и&nbsp;строгого соблюдения клиентом рекомендаций по&nbsp;домашнему уходу в&nbsp;период восстановления.
+          </p>
+          <p>
+            Примеры работ (&laquo;до/после&raquo;) отражают реальные результаты предыдущих процедур и&nbsp;не&nbsp;могут гарантировать стопроцентной повторяемости оттенка при иных исходных данных. Для получения завершённого результата перманентного макияжа может потребоваться плановая коррекция через 1–2&nbsp;месяца после первичного сеанса.
+          </p>
+
+          <h3>4. Порядок записи, переноса и&nbsp;отмены визита</h3>
+          <p>
+            Предварительная запись осуществляется по&nbsp;телефону <a href="tel:+79017450342" class="text-accent">+7 (901) 745-03-42</a> или в&nbsp;мессенджерах MAX / Telegram. Визит считается согласованным после подтверждения времени мастером. При необходимости отмены или переноса просим предупреждать не&nbsp;позднее чем за&nbsp;24&nbsp;часа. В&nbsp;случае опоздания более чем на&nbsp;15–20&nbsp;минут студия вправе предложить перенос записи, если оставшегося времени недостаточно для безопасного соблюдения технологии процедуры.
+          </p>
+
+          <h3>5. Внешние ссылки и&nbsp;интеллектуальная собственность</h3>
+          <p>
+            Студия не&nbsp;несёт ответственности за&nbsp;работу, содержание и&nbsp;политики сторонних платформ, ссылки на&nbsp;которые размещены на&nbsp;сайте (Яндекс Карты, Telegram, MAX, ВКонтакте), а&nbsp;также за&nbsp;перебои связи на&nbsp;стороне провайдеров. Все тексты, оформление сайта, авторские фотографии работ и&nbsp;портретные изображения защищены частью 4&nbsp;ГК&nbsp;РФ; копирование и&nbsp;распространение материалов без письменного согласия правообладателя не&nbsp;допускаются.
+          </p>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================================================================
+       MINIMALIST DARK LUXURY COOKIE CONSENT BANNER
+       ================================================================= -->
+  <aside class="cookie-banner" id="cookieBanner" role="region" aria-label="Уведомление об использовании файлов cookie" aria-live="polite" hidden>
+    <div class="cookie-banner-content">
+      <div class="cookie-banner-text">
+        <span class="cookie-banner-kicker">COOKIE И 152-ФЗ</span>
+        <p class="cookie-banner-desc">
+          Мы используем технические cookie и&nbsp;локальное хранилище для стабильной работы сайта и&nbsp;карты проезда. Подробнее &mdash; в&nbsp;<button type="button" class="inline-legal-link" data-legal-doc="cookies">Политике cookie</button> и&nbsp;<button type="button" class="inline-legal-link" data-legal-doc="privacy">Политике ПДн</button>.
+        </p>
+      </div>
+      <div class="cookie-banner-actions">
+        <button type="button" class="btn-cookie-outline" id="btnCookieEssential">Только необходимые</button>
+        <button type="button" class="btn-cookie-accept" id="btnCookieAccept">Принять</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Lookbook Floating Preview (Desktop Hover on Services 01-03) -->
+  <div class="service-lookbook" id="serviceLookbook" aria-hidden="true">
+    <img src="assets/service-brows.jpg" alt="" id="serviceLookbookImg">
+  </div>
+
+  <!-- Minimalist Copy Feedback Toast -->
+  <div class="copy-toast" id="copyToast" role="status" aria-live="polite" hidden>
+    <span class="copy-toast-dot" aria-hidden="true"></span>
+    <span id="copyToastText">Скопировано</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
